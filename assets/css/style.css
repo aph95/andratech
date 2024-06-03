@@ -102,7 +102,7 @@ nav .nav-link::after {
         transform: translateX(0) rotate(-45deg);
     }
     100%
-    {
+{
         transform: translateX(calc(100% - 58px)) rotate(0deg);
     }
 }
@@ -159,43 +159,4 @@ footer {
     text-decoration:none;
     color:white;
     border-bottom:2px solid;
-}
-
-/* Add styles for the hamburger menu icon */
-.menu-icon {
-    display: none; /* Hide by default */
-    cursor: pointer;
-}
-
-.menu-icon i {
-    font-size: 24px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hide nav links by default */
-    }
-
-    /* Show the hamburger menu icon */
-    .menu-icon {
-        display: block;
-    }
-
-    /* Adjust styles for the nav links when displayed */
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #061E26;
-        width: 100%;
-        padding: 20px;
-        z-index: 1000;
-    }
-
-    .nav-link {
-        margin-bottom: 10px;
-    }
 }

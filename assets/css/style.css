@@ -81,11 +81,28 @@ nav .nav-link::after {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    .masthead {
+        min-height: 70vh;
+    }
+
+    .logo-container h1 {
+        font-size: 3rem;
+    }
+
+    /* Hide some elements or change layout for smaller screens */
+    .jumbotron p {
+        display: none;
+    }
+}
+
 @keyframes logoAnimation {
     0% {
         transform: translateX(0) rotate(-45deg);
     }
-    100% {
+    100%
+    {
         transform: translateX(calc(100% - 58px)) rotate(0deg);
     }
 }
@@ -137,7 +154,6 @@ footer {
 .footer-background {
     width: 100%;
 }
-
 
 .nav-link-active {
     text-decoration:none;

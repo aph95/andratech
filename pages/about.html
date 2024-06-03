@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -114,33 +114,38 @@
     </div>
 
     <script>
-        var start01 = document.getElementById('box-1'),
-            end01 = document.getElementById('box-2'),
-            start02 = document.getElementById('box-2'),
-            end02 = document.getElementById('box-3'),
-            start03 = document.getElementById('box-3'),
-            end03 = document.getElementById('box-4');
-
-        new LeaderLine(start01, end01,
-            {
-                dash: true,
-                startPlugColor: '#000000',
-                endPlugColor: '#000000',
-                gradient: true,
-                startPlug: 'disc',
-                endPlug: 'behind',
-            });
-
-        new LeaderLine(start02, end02,
-            {
-                dash: true,
-                startPlugColor: '#000000',
-                endPlugColor: '#000000',
-                gradient: true,
-                startPlug: 'disc',
-                endPlug: 'disc',
-            });
-
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check screen width
+            if (window.innerWidth >= 768) {
+                // Execute script if screen width is equal to or greater than 768 pixels
+                document.querySelector('.logo-container').classList.add('active');
+    
+                var start01 = document.getElementById('box-1'),
+                    end01 = document.getElementById('box-2'),
+                    start02 = document.getElementById('box-2'),
+                    end02 = document.getElementById('box-3'),
+                    start03 = document.getElementById('box-3'),
+                    end03 = document.getElementById('box-4');
+    
+                new LeaderLine(start01, end01, {
+                    dash: true,
+                    startPlugColor: '#000000',
+                    endPlugColor: '#000000',
+                    gradient: true,
+                    startPlug: 'disc',
+                    endPlug: 'behind',
+                });
+    
+                new LeaderLine(start02, end02, {
+                    dash: true,
+                    startPlugColor: '#000000',
+                    endPlugColor: '#000000',
+                    gradient: true,
+                    startPlug: 'disc',
+                    endPlug: 'disc',
+                });
+            }
+        });
     </script>
 
 </body>

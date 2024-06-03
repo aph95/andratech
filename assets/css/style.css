@@ -99,6 +99,11 @@ nav .nav-link::after {
     .jumbotron p {
         display: none;
     }
+
+    .jumbotron h2 {
+        font-size:0.95rem;
+    }
+    
 }
 
 @keyframes logoAnimation {

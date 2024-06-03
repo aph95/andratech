@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'HumanSans-Bold';
+    src: url('../webfonts/HumanSans-Bold.otf');
+}
+
+.masthead {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../images/jumbotron.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  height: 500px;
+  position: relative;
+}
+
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    background-color: #061E26;
+    padding:0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #061E26;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 58px;
+    display: inline-block;
+    transform: translateX(0) rotate(-45deg);
+    transition: transform 3s ease-in-out;
+}
+
+h1 {
+    font-family: 'HumanSans-Bold';
+    font-size: 4rem;
+    color: white;
+    display: inline-block;
+    padding-left: 30px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 3s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.btn {
+    background-color:#1b596d;
+    border:none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-link {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: rgb(255, 255, 255);
+    transition: width 0.3s;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: translateX(0) rotate(-45deg);
+    }
+    100% {
+        transform: translateX(calc(100% - 58px)) rotate(0deg);
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.logo-container.active .logo {
+    animation: logoAnimation 1s ease-in-out forwards;
+}
+
+.logo-container.active h1 {
+    animation: textAnimation 1s ease-in-out forwards;
+}
+
+.jumbotron h2, .jumbotron p {
+    color: white;
+}
+
+main {
+    background-color:white;
+}
+
+.footer-background {
+    background-color: #152024;
+}
+
+footer {
+    color:white;
+    margin-top:0;
+    padding-top:0;
+    margin-bottom: -20px;
+}

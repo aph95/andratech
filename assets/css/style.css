@@ -103,7 +103,10 @@ nav .nav-link::after {
     .jumbotron h2 {
         font-size:0.95rem;
     }
-    
+
+    header {
+        margin:-15px;
+    }
 }
 
 @keyframes logoAnimation {

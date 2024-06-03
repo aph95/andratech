@@ -88,7 +88,11 @@ nav .nav-link::after {
     }
 
     .logo-container h1 {
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    .logo-container img {
+        display:none;
     }
 
     /* Hide some elements or change layout for smaller screens */
